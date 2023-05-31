@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="@dimen/_8sdp"
+            android:elevation="@dimen/_20sdp"
+            android:layout_marginBottom="@dimen/_10sdp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/cvGame"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="@dimen/_8sdp">
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/ivGame"
+                    android:layout_width="@dimen/_50sdp"
+                    android:layout_height="@dimen/_50sdp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/profile_img"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:shapeAppearance="@style/circleImageProfileVP" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvGameStatus"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_15sdp"
+                    android:fontFamily="@font/visbycf_extrabold"
+                    android:includeFontPadding="false"
+                    android:text="@string/in_game"
+                    android:textAllCaps="true"
+                    android:textColor="@color/text_color"
+                    android:textSize="@dimen/_12ssp"
+                    app:layout_constraintStart_toEndOf="@+id/ivGame"
+                    app:layout_constraintTop_toTopOf="@id/ivGame" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvGameDay"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_2sdp"
+                    android:fontFamily="@font/montserrat_medium"
+                    android:includeFontPadding="false"
+                    android:text="@string/sunday"
+                    android:textColor="@color/text_color"
+                    android:textSize="@dimen/_10ssp"
+                    app:layout_constraintStart_toStartOf="@+id/tvGameStatus"
+                    app:layout_constraintTop_toBottomOf="@+id/tvGameStatus" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvGameName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/visbycf_bold"
+                    android:text="@string/mixed_baseball"
+                    android:textColor="#66000000"
+                    android:textSize="@dimen/_8ssp"
+                    app:layout_constraintBottom_toBottomOf="@+id/ivGame"
+                    app:layout_constraintStart_toStartOf="@+id/tvGameDay" />
+
+                <!--<androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btPlay"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/_18sdp"
+                    android:background="@drawable/blue_button_gradient"
+                    android:fontFamily="@font/visbycf_extrabold"
+                    android:text="@string/play"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_8ssp"
+                    app:layout_constraintBottom_toBottomOf="@+id/ivGame"
+                    app:layout_constraintEnd_toEndOf="parent" />-->
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

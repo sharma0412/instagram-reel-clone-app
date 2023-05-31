@@ -1,0 +1,323 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:context=".ui.ui.scout.fragment.SignupFragment">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/icon"
+                android:layout_width="@dimen/_150sdp"
+                android:layout_height="@dimen/_150sdp"
+                android:layout_marginTop="@dimen/_30sdp"
+                android:layout_marginBottom="@dimen/_20sdp"
+                android:src="@drawable/logo"
+                app:layout_constraintBottom_toTopOf="@id/etFullname"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/etFullname"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_20sdp"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:background="@drawable/rectangle_shape"
+                android:elevation="@dimen/_2sdp"
+                android:fontFamily="@font/visbycf_medium"
+                android:hint="Full Name"
+                android:padding="@dimen/_12sdp"
+                app:layout_constraintBottom_toTopOf="@id/etEmail"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/icon" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/etEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_20sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:background="@drawable/rectangle_shape"
+                android:elevation="@dimen/_2sdp"
+                android:fontFamily="@font/visbycf_medium"
+                android:hint="@string/email"
+                android:padding="@dimen/_12sdp"
+                app:layout_constraintBottom_toTopOf="@id/etPassword"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/etFullname" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/etPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_20sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:background="@drawable/rectangle_shape"
+                android:elevation="@dimen/_2sdp"
+                android:fontFamily="@font/visbycf_medium"
+                android:hint="Password"
+                android:inputType="textPassword"
+                android:padding="@dimen/_12sdp"
+                app:layout_constraintBottom_toTopOf="@id/linearLayout"
+                app:layout_constraintEnd_toEndOf="@+id/etEmail"
+                app:layout_constraintStart_toStartOf="@+id/etEmail"
+                app:layout_constraintTop_toBottomOf="@+id/etEmail" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/eyeIV"
+                android:layout_width="@dimen/_14sdp"
+                android:layout_height="@dimen/_14sdp"
+                android:layout_marginEnd="@dimen/_15sdp"
+                android:elevation="@dimen/_5sdp"
+                android:src="@drawable/ic_close_eye"
+                app:layout_constraintBottom_toBottomOf="@+id/etPassword"
+                app:layout_constraintEnd_toEndOf="@+id/etPassword"
+                app:layout_constraintTop_toTopOf="@id/etPassword" />
+
+            <LinearLayout
+                android:id="@+id/linearLayout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:background="@drawable/rectangle_shape"
+                android:elevation="@dimen/_2sdp"
+                android:weightSum="2"
+                app:layout_constraintBottom_toTopOf="@id/btnSignup"
+                app:layout_constraintEnd_toEndOf="@id/etPassword"
+                app:layout_constraintStart_toStartOf="@id/etPassword"
+                app:layout_constraintTop_toBottomOf="@id/etPassword">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/scoutBTN"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="@dimen/_4sdp"
+                    android:layout_weight="1"
+                    android:background="@drawable/white_button"
+                    android:fontFamily="@font/visbycf_medium"
+                    android:gravity="center"
+                    android:padding="@dimen/_10sdp"
+                    android:text="Scout"
+                    android:textColor="@color/blue"
+                    android:textStyle="bold"
+                    app:colors="@array/text_color" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/athleteBTN"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="@dimen/_4sdp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/visbycf_medium"
+                    android:gravity="center"
+                    android:padding="@dimen/_10sdp"
+                    android:text="Athlete"
+                    android:textColor="@color/unselected_text"
+                    android:textStyle="bold"
+                    app:colors="@array/text_color" />
+
+            </LinearLayout>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnSignup"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:background="@drawable/blue_button_gradient"
+                android:fontFamily="@font/visbycf_medium"
+                android:text="Sign up"
+                android:textColor="@color/white"
+                app:layout_constraintBottom_toTopOf="@id/appCompatTextView"
+                app:layout_constraintEnd_toEndOf="@+id/linearLayout"
+                app:layout_constraintStart_toStartOf="@+id/linearLayout"
+                app:layout_constraintTop_toBottomOf="@id/linearLayout" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/appCompatTextView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:fontFamily="@font/visbycf_medium"
+                android:gravity="center"
+                android:text="by Signing up you accept the Terms of Service and"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_11ssp"
+                app:layout_constraintBottom_toTopOf="@id/tv2"
+                app:layout_constraintEnd_toEndOf="@+id/btnSignup"
+                app:layout_constraintStart_toStartOf="@+id/btnSignup"
+                app:layout_constraintTop_toBottomOf="@+id/btnSignup" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:layout_marginBottom="@dimen/_10sdp"
+                android:fontFamily="@font/visbycf_medium"
+                android:gravity="center"
+                android:text="Privacy Policy"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_11ssp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toTopOf="@id/tvOr"
+                app:layout_constraintEnd_toEndOf="@+id/appCompatTextView"
+                app:layout_constraintStart_toStartOf="@+id/appCompatTextView"
+                app:layout_constraintTop_toBottomOf="@id/appCompatTextView" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvOr"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:fontFamily="@font/visbycf_medium"
+                android:text="@string/or"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toTopOf="@id/btnGoogle"
+                app:layout_constraintEnd_toEndOf="@+id/etEmail"
+                app:layout_constraintStart_toStartOf="@+id/etEmail"
+                app:layout_constraintTop_toBottomOf="@id/tv2" />
+
+            <View
+                android:id="@+id/view"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_1sdp"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:background="#E3E3E3"
+                app:layout_constraintBottom_toBottomOf="@id/tvOr"
+                app:layout_constraintEnd_toEndOf="@id/etEmail"
+                app:layout_constraintStart_toEndOf="@id/tvOr"
+                app:layout_constraintTop_toTopOf="@id/tvOr" />
+
+            <View
+                android:id="@+id/view2"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_1sdp"
+                android:layout_marginEnd="@dimen/_5sdp"
+                android:background="#E3E3E3"
+                app:layout_constraintBottom_toBottomOf="@id/tvOr"
+                app:layout_constraintEnd_toStartOf="@id/tvOr"
+                app:layout_constraintStart_toStartOf="@id/etEmail"
+                app:layout_constraintTop_toTopOf="@id/tvOr" />
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/btnGoogle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/_15sdp"
+                android:elevation="@dimen/_5sdp"
+                app:cardCornerRadius="@dimen/_20sdp"
+                app:layout_constraintBottom_toTopOf="@id/btnFacebook"
+                app:layout_constraintEnd_toEndOf="@id/view"
+                app:layout_constraintStart_toStartOf="@id/view2"
+                app:layout_constraintTop_toBottomOf="@id/tvOr">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/_5sdp">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/ivGoogle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_google_icon" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvGoogle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_8sdp"
+                        android:fontFamily="@font/visbycf_medium"
+                        android:text="Continue With Google" />
+
+                </LinearLayout>
+
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/btnFacebook"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/_15sdp"
+                android:elevation="@dimen/_5sdp"
+                app:cardCornerRadius="@dimen/_20sdp"
+                app:layout_constraintBottom_toTopOf="@+id/ll"
+                app:layout_constraintEnd_toEndOf="@+id/btnGoogle"
+                app:layout_constraintStart_toStartOf="@+id/btnGoogle"
+                app:layout_constraintTop_toBottomOf="@+id/btnGoogle">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/_5sdp">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/ivFavebook"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_facebook" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvFacebook"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_5sdp"
+                        android:fontFamily="@font/visbycf_medium"
+                        android:text="Continue With Facebook" />
+
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <LinearLayout
+                android:id="@+id/ll"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/_10sdp"
+                android:orientation="horizontal"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvDontHave"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/visbycf_medium"
+                    android:text="Don't have an Account?" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvLogin"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_4sdp"
+                    android:fontFamily="@font/visbycf_medium"
+                    android:text="@string/login"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+</layout>

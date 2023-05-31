@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/kickoffFragment"
+        android:title="Kick Off"
+        android:icon="@drawable/kickoff_selector"/>
+
+    <item
+        android:id="@+id/insightFragment"
+        android:title="Insight"
+        android:icon="@drawable/insight_selector"/>
+
+    <item
+        android:id="@+id/athleteReelsFragment"
+        android:title="@string/reels"
+        android:icon="@drawable/reels_selector"/>
+
+    <item
+        android:id="@+id/athleteInboxFragment"
+        android:title="@string/inbox"
+        android:icon="@drawable/inbox_selector"/>
+
+    <item
+        android:id="@+id/athleteProfileFragment"
+        android:title="Profile"
+        android:icon="@drawable/profile_selector"/>
+</menu>

@@ -1,0 +1,88 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        tools:context=".ui.ui.scout.settings.Security">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/btnBack"
+                android:layout_width="@dimen/_40sdp"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_margin="@dimen/_16sdp"
+                android:background="@drawable/back_button"
+                android:src="@drawable/ic_back"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/visbycf_medium"
+                android:text="@string/security"
+                android:textSize="@dimen/_18ssp"
+                android:textStyle="bold"
+                android:textColor="#B3000000"
+                app:layout_constraintBottom_toBottomOf="@+id/btnBack"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/btnBack" />
+
+            <TextView
+                android:id="@+id/tvChangeEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:fontFamily="@font/visbycf_medium"
+                android:text="@string/change_email"
+                android:paddingTop="@dimen/_14sdp"
+                android:paddingBottom="@dimen/_14sdp"
+                android:textSize="@dimen/_14ssp"
+                android:textColor="#99000000"
+                app:layout_constraintTop_toBottomOf="@id/btnBack"
+                android:layout_marginHorizontal="@dimen/_15sdp"
+                app:drawableEndCompat="@drawable/ic_next" />
+
+            <TextView
+                android:id="@+id/tvChangePassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/visbycf_medium"
+                android:text="@string/change_password"
+                app:layout_constraintTop_toBottomOf="@id/view"
+                android:layout_marginHorizontal="@dimen/_15sdp"
+                android:paddingTop="@dimen/_14sdp"
+                android:paddingBottom="@dimen/_14sdp"
+                android:textSize="@dimen/_14ssp"
+                android:textColor="#99000000"
+                app:drawableEndCompat="@drawable/ic_next" />
+
+            <View
+                android:id="@+id/view"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_1sdp"
+                android:background="@color/line_grey"
+                app:layout_constraintTop_toBottomOf="@id/tvChangeEmail" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_1sdp"
+                android:background="@color/line_grey"
+                app:layout_constraintTop_toBottomOf="@id/tvChangePassword" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+</layout>

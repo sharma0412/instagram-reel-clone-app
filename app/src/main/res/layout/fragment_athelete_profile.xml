@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        tools:context=".ui.ui.athlete.bottombarfragment.AthleteProfileFragment">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <View
+                android:id="@+id/view3"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_150sdp"
+                android:background="@drawable/profile_gradient"
+                android:elevation="@dimen/_10sdp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/imageView3"
+                android:layout_width="@dimen/_120sdp"
+                android:layout_height="@dimen/_120sdp"
+                android:elevation="@dimen/_10sdp"
+                android:src="@drawable/ic_circle"
+                app:layout_constraintBottom_toBottomOf="@+id/view3"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/view3" />
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/circleProfileIV"
+                android:layout_width="@dimen/_115sdp"
+                android:layout_height="@dimen/_115sdp"
+                android:elevation="@dimen/_10sdp"
+                android:src="@drawable/profile_placeholder"
+                app:civ_border_color="@color/white"
+                app:civ_border_width="@dimen/_2sdp"
+                app:layout_constraintBottom_toBottomOf="@+id/imageView3"
+                app:layout_constraintEnd_toEndOf="@+id/imageView3"
+                app:layout_constraintStart_toStartOf="@+id/imageView3"
+                app:layout_constraintTop_toTopOf="@+id/imageView3" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/imageView4"
+                android:layout_width="@dimen/_60sdp"
+                android:layout_height="@dimen/_60sdp"
+                android:elevation="@dimen/_10sdp"
+                android:src="@drawable/ic_rectangle_profile"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/btnEditProfile"
+                android:layout_width="@dimen/_14sdp"
+                android:layout_height="@dimen/_14sdp"
+                android:layout_marginStart="@dimen/_3sdp"
+                android:layout_marginBottom="@dimen/_14sdp"
+                android:elevation="@dimen/_10sdp"
+                android:src="@drawable/ic_edit"
+                app:layout_constraintBottom_toBottomOf="@+id/imageView4"
+                app:layout_constraintEnd_toEndOf="@id/imageView4"
+                app:layout_constraintStart_toStartOf="@+id/imageView4"
+                app:layout_constraintTop_toTopOf="@+id/imageView4" />
+
+            <!--<androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivBack"
+                android:layout_width="@dimen/_60sdp"
+                android:layout_height="@dimen/_60sdp"
+                android:elevation="@dimen/_10sdp"
+                android:src="@drawable/ic_rectangle_profile"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/btnBack"
+                android:layout_width="@dimen/_14sdp"
+                android:layout_height="@dimen/_14sdp"
+                android:layout_marginBottom="@dimen/_12sdp"
+                android:elevation="@dimen/_10sdp"
+                android:src="@drawable/ic_back"
+                android:tint="@color/white"
+                app:layout_constraintBottom_toBottomOf="@+id/ivBack"
+                app:layout_constraintEnd_toEndOf="@id/ivBack"
+                app:layout_constraintStart_toStartOf="@+id/ivBack"
+                app:layout_constraintTop_toTopOf="@+id/ivBack" />-->
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivSettings"
+                android:layout_width="@dimen/_60sdp"
+                android:layout_height="@dimen/_60sdp"
+                android:elevation="@dimen/_10sdp"
+                android:src="@drawable/ic_rectangle_profile"
+                android:layout_marginEnd="@dimen/_10sdp"
+                app:layout_constraintEnd_toStartOf="@+id/btnEditProfile"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/btnSettings"
+                android:layout_width="@dimen/_14sdp"
+                android:layout_height="@dimen/_14sdp"
+                android:layout_marginBottom="@dimen/_12sdp"
+                android:elevation="@dimen/_10sdp"
+                android:src="@drawable/ic_settings"
+                android:tint="@color/white"
+                app:layout_constraintBottom_toBottomOf="@+id/ivSettings"
+                app:layout_constraintEnd_toEndOf="@id/ivSettings"
+                app:layout_constraintStart_toStartOf="@+id/ivSettings"
+                app:layout_constraintTop_toTopOf="@+id/ivSettings" />
+
+            <com.mursaat.extendedtextview.AnimatedGradientTextView
+                android:id="@+id/tvName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:fontFamily="@font/visbycf_medium"
+                android:text="@string/smith_advinor"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_24ssp"
+                app:angle="90"
+                app:colors="@array/text_color"
+                app:layout_constraintEnd_toEndOf="@id/circleProfileIV"
+                app:layout_constraintStart_toStartOf="@id/circleProfileIV"
+                app:layout_constraintTop_toBottomOf="@id/circleProfileIV"
+                app:maxFPS="30"
+                app:simultaneousColors="2"
+                app:speed="1000" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_power"
+                app:layout_constraintBottom_toBottomOf="@+id/tvName"
+                app:layout_constraintStart_toEndOf="@+id/tvName"
+                app:layout_constraintTop_toTopOf="@+id/tvName" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvDescription"
+                android:layout_width="@dimen/_250sdp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:gravity="center"
+                android:text="@string/lorem_ipsum"
+                android:textColor="#B3000000"
+                android:textSize="@dimen/_13ssp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvName" />
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/appCompatTextView7"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:elevation="@dimen/_10sdp"
+                app:layout_constraintTop_toBottomOf="@+id/tvDescription">
+
+                <com.mursaat.extendedtextview.AnimatedGradientTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/montserrat_semibold"
+                    android:gravity="center"
+                    android:padding="@dimen/_5sdp"
+                    android:text="@string/reels"
+                    android:textAllCaps="true"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_14ssp"
+                    app:angle="90"
+                    app:colors="@array/text_color"
+                    app:maxFPS="30"
+                    app:simultaneousColors="2"
+                    app:speed="1000" />
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvReels"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:nestedScrollingEnabled="false"
+                app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                app:layout_constraintTop_toBottomOf="@+id/appCompatTextView7"
+                app:spanCount="3"
+                tools:itemCount="10"
+                tools:listitem="@layout/reels_adapter" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+</layout>

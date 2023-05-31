@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/welcomeScreenFragment">
+
+    <fragment
+        android:id="@+id/welcomeScreenFragment"
+        android:name="com.instagramreel.ui.ui.scout.fragment.WelcomeScreenFragment"
+        android:label="WelcomeScreenFragment"
+        tools:layout="@layout/fragment_welcome_screen">
+        <action
+            android:id="@+id/action_welcomeScreenFragment_to_signinFragment"
+            app:destination="@id/signinFragment" />
+        <action
+            android:id="@+id/action_welcomeScreenFragment_to_signupFragment"
+            app:destination="@id/signupFragment" />
+        <action
+            android:id="@+id/action_welcomeScreenFragment_to_numberFragment"
+            app:destination="@id/numberFragment" />
+        <action
+            android:id="@+id/action_welcomeScreenFragment_to_athleteUpdateDetailsFragment"
+            app:destination="@id/athleteUpdateDetailsFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/signinFragment"
+        android:name="com.instagramreel.ui.ui.scout.fragment.signin.SigninFragment"
+        android:label="SigninFragment"
+        tools:layout="@layout/fragment_signin">
+
+        <action
+            android:id="@+id/action_signinFragment_to_signupFragment"
+            app:destination="@id/signupFragment"
+            app:popUpTo="@id/signinFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_signinFragment_to_numberFragment"
+            app:destination="@id/numberFragment" />
+        <action
+            android:id="@+id/action_signinFragment_to_forgotPassFragment"
+            app:destination="@id/forgotPassFragment" />
+        <action
+            android:id="@+id/action_signinFragment_to_myDetailFragment2"
+            app:destination="@id/myDetailFragment" />
+        <action
+            android:id="@+id/action_signinFragment_to_athleteUpdateDetailsFragment2"
+            app:destination="@id/athleteUpdateDetailsFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/signupFragment"
+        android:name="com.instagramreel.ui.ui.scout.fragment.signup.SignupFragment"
+        android:label="SignupFragment"
+        tools:layout="@layout/fragment_signup">
+
+        <action
+            android:id="@+id/action_signupFragment_to_signinFragment"
+            app:destination="@id/signinFragment"
+            app:popUpTo="@id/signinFragment"
+            app:popUpToInclusive="true" />
+
+        <action
+            android:id="@+id/action_signupFragment_to_numberFragment"
+            app:destination="@id/numberFragment" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/numberFragment"
+        android:name="com.instagramreel.ui.ui.scout.fragment.signup.NumberFragment"
+        android:label="NumberFragment"
+        tools:layout="@layout/fragment_number">
+        <action
+            android:id="@+id/action_numberFragment_to_signupFragment"
+            app:destination="@id/signupFragment" />
+        <action
+            android:id="@+id/action_numberFragment_to_numberVerificationFragment"
+            app:destination="@id/numberVerificationFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/forgotPassFragment"
+        android:name="com.instagramreel.ui.ui.scout.fragment.signin.ForgotPassFragment"
+        android:label="fragment_forgot_pass"
+        tools:layout="@layout/fragment_forgot_pass" >
+        <action
+            android:id="@+id/action_forgotPassFragment_to_signinFragment"
+            app:destination="@id/signinFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/numberVerificationFragment"
+        android:name="com.instagramreel.ui.ui.scout.fragment.signup.NumberVerificationFragment"
+        android:label="NumberVerificationFragment"
+        tools:layout="@layout/fragment_number_verification">
+        <action
+            android:id="@+id/action_numberVerificationFragment_to_numberFragment"
+            app:destination="@id/numberFragment" />
+        <action
+            android:id="@+id/action_numberVerificationFragment_to_myDetailFragment"
+            app:destination="@id/myDetailFragment" />
+        <action
+            android:id="@+id/action_numberVerificationFragment_to_athleteUpdateDetailsFragment"
+            app:destination="@id/athleteUpdateDetailsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/myDetailFragment"
+        android:name="com.instagramreel.ui.ui.scout.fragment.signup.MyDetailFragment"
+        android:label="MyDetailFragment"
+        tools:layout="@layout/fragment_my_detail">
+        <action
+            android:id="@+id/action_myDetailFragment_to_numberVerificationFragment"
+            app:destination="@id/numberVerificationFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/athleteUpdateDetailsFragment"
+        android:name="com.instagramreel.ui.ui.athlete.fragments.AthleteUpdateDetailsFragment"
+        android:label="fragment_athlete_update_details"
+        tools:layout="@layout/fragment_athlete_update_details" />
+</navigation>

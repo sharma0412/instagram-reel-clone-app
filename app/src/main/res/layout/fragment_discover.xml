@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/_10sdp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/cv_Search"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_15sdp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:background="@drawable/discober_search"
+                app:layout_constraintBottom_toBottomOf="@+id/btnFilter"
+                app:layout_constraintEnd_toStartOf="@+id/btnFilter"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/search_box"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_40sdp"
+                    android:hint="Search"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:background="@android:color/transparent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/btnCamera"
+                    android:layout_width="@dimen/_40sdp"
+                    android:layout_height="0dp"
+                    android:layout_margin="@dimen/_3sdp"
+                    android:elevation="@dimen/_10sdp"
+                    app:cardCornerRadius="@dimen/_6sdp"
+                    app:layout_constraintBottom_toBottomOf="@id/search_box"
+                    app:layout_constraintEnd_toEndOf="@id/search_box"
+                    app:layout_constraintTop_toTopOf="@id/search_box" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:elevation="@dimen/_10sdp"
+                    android:src="@drawable/ic_clarity_search_line"
+                    app:layout_constraintBottom_toBottomOf="@id/btnCamera"
+                    app:layout_constraintEnd_toEndOf="@id/btnCamera"
+                    app:layout_constraintStart_toStartOf="@id/btnCamera"
+                    app:layout_constraintTop_toTopOf="@id/btnCamera" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/btnFilter"
+                android:layout_width="@dimen/_40sdp"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_marginEnd="@dimen/_15sdp"
+                android:background="@drawable/filter_button_gradient"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_filter"
+                app:layout_constraintBottom_toBottomOf="@id/btnFilter"
+                app:layout_constraintEnd_toEndOf="@id/btnFilter"
+                app:layout_constraintStart_toStartOf="@id/btnFilter"
+                app:layout_constraintTop_toTopOf="@id/btnFilter" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/appCompatTextView11"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:fontFamily="@font/visbycf_medium"
+                android:text="Recommended for you"
+                android:textColor="@color/text_color"
+                android:textSize="@dimen/_14ssp"
+                app:layout_constraintEnd_toEndOf="@+id/btnFilter"
+                app:layout_constraintStart_toStartOf="@+id/cv_Search"
+                app:layout_constraintTop_toBottomOf="@+id/cv_Search" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvRecommended"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:orientation="horizontal"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/appCompatTextView11"
+                app:layout_constraintTop_toBottomOf="@+id/appCompatTextView11"
+                tools:listitem="@layout/adapter_discover" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/appCompatTextView12"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:fontFamily="@font/visbycf_medium"
+                android:text="Football"
+                android:textColor="@color/text_color"
+                android:textSize="@dimen/_14ssp"
+                app:layout_constraintEnd_toEndOf="@+id/rvRecommended"
+                app:layout_constraintStart_toStartOf="@+id/rvRecommended"
+                app:layout_constraintTop_toBottomOf="@+id/rvRecommended" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvFootball"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:orientation="horizontal"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/appCompatTextView12"
+                app:layout_constraintTop_toBottomOf="@+id/appCompatTextView12"
+                tools:listitem="@layout/adapter_discover" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/appCompatTextView13"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:fontFamily="@font/visbycf_medium"
+                android:text="Soccer"
+                android:textColor="@color/text_color"
+                android:textSize="@dimen/_14ssp"
+                app:layout_constraintEnd_toEndOf="@+id/rvFootball"
+                app:layout_constraintStart_toStartOf="@+id/rvFootball"
+                app:layout_constraintTop_toBottomOf="@+id/rvFootball" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvSoccer"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:orientation="horizontal"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/appCompatTextView13"
+                app:layout_constraintTop_toBottomOf="@+id/appCompatTextView13"
+                tools:listitem="@layout/adapter_discover" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/appCompatTextView14"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:fontFamily="@font/visbycf_medium"
+                android:text="Tennis"
+                android:textColor="@color/text_color"
+                android:textSize="@dimen/_14ssp"
+                app:layout_constraintEnd_toEndOf="@+id/rvSoccer"
+                app:layout_constraintStart_toStartOf="@+id/rvSoccer"
+                app:layout_constraintTop_toBottomOf="@+id/rvSoccer" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvTennis"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:orientation="horizontal"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/appCompatTextView14"
+                app:layout_constraintTop_toBottomOf="@+id/appCompatTextView14"
+                tools:listitem="@layout/adapter_discover" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+</layout>

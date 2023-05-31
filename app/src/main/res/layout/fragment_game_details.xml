@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        tools:context=".ui.ui.athlete.fragments.GameDetailsFragment">
+
+        <!-- TODO: Update blank fragment layout -->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivGameImage"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_120sdp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/profile_img"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvSchedule"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_15sdp"
+                android:layout_marginTop="@dimen/_18sdp"
+                android:fontFamily="@font/montserrat_semibold"
+                android:text="@string/sunday_morning_in_game"
+                android:textColor="@color/text_color"
+                android:textSize="@dimen/_16ssp"
+                app:layout_constraintTop_toBottomOf="@+id/ivGameImage" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvHostedBy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:fontFamily="@font/visbycf_bold"
+                android:text="@string/hosted_by"
+                android:textColor="#66000000"
+                app:layout_constraintStart_toStartOf="@id/tvSchedule"
+                app:layout_constraintTop_toBottomOf="@id/tvSchedule" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvHosterName"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:fontFamily="@font/montserrat_medium"
+                android:includeFontPadding="false"
+                android:text="@string/marigum_smile"
+                android:textColor="@color/text_color"
+                android:textSize="@dimen/_12ssp"
+                app:layout_constraintStart_toStartOf="@+id/tvHostedBy"
+                app:layout_constraintTop_toBottomOf="@+id/tvHostedBy" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvReason"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:fontFamily="@font/visbycf_medium"
+                android:layout_marginTop="@dimen/_30sdp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/tvSchedule"
+                app:layout_constraintStart_toStartOf="@+id/tvSchedule"
+                app:layout_constraintTop_toBottomOf="@+id/tvPrice" />
+
+            <!--<FrameLayout
+                android:id="@+id/flMessage"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_25sdp"
+                android:background="@drawable/outline_gradient"
+                app:layout_constraintBottom_toBottomOf="@+id/tvCityName"
+                app:layout_constraintEnd_toEndOf="@+id/tvSchedule"
+                android:elevation="@dimen/_3sdp">
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btnSignup"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/_1sdp"
+                    android:background="@drawable/inner_color"
+                    android:fontFamily="@font/visbycf_extrabold"
+                    android:paddingHorizontal="@dimen/_14sdp"
+                    android:text="@string/message"
+                    android:textAllCaps="false"
+                    android:textColor="@color/blue"
+                    app:colors="@array/text_color" />
+            </FrameLayout>-->
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvGameName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableStart="@drawable/ic_muscle"
+                android:text="@string/soccer"
+                android:textSize="@dimen/_12ssp"
+                android:fontFamily="@font/montserrat_medium"
+                android:textColor="#172037"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:drawablePadding="@dimen/_6sdp"
+                app:layout_constraintStart_toStartOf="@+id/tvHosterName"
+                app:layout_constraintTop_toBottomOf="@+id/tvHosterName" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvGameDayAndTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableStart="@drawable/ic_watch"
+                android:text="@string/sun_28_mar_8_30_pm"
+                android:textSize="@dimen/_12ssp"
+                android:fontFamily="@font/montserrat_medium"
+                android:textColor="#172037"
+                android:textAllCaps="true"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:drawablePadding="@dimen/_8sdp"
+                app:layout_constraintStart_toStartOf="@+id/tvGameName"
+                app:layout_constraintTop_toBottomOf="@+id/tvGameName" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvGameCityName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableStart="@drawable/ic_detail_location"
+                android:text="@string/london_square_uk"
+                android:textSize="@dimen/_12ssp"
+                android:fontFamily="@font/montserrat_medium"
+                android:textColor="#172037"
+                android:textAllCaps="false"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:drawablePadding="@dimen/_7sdp"
+                app:layout_constraintStart_toStartOf="@+id/tvGameDayAndTime"
+                app:layout_constraintTop_toBottomOf="@+id/tvGameDayAndTime" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableStart="@drawable/ic_price"
+                android:text="@string/free"
+                android:textSize="@dimen/_12ssp"
+                android:fontFamily="@font/montserrat_medium"
+                android:textColor="#172037"
+                android:textAllCaps="false"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:drawablePadding="@dimen/_8sdp"
+                app:layout_constraintStart_toStartOf="@+id/tvGameCityName"
+                app:layout_constraintTop_toBottomOf="@+id/tvGameCityName" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivCancel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/cancel"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:layout_marginStart="@dimen/_15sdp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btInterested"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_10sdp"
+                android:layout_marginBottom="@dimen/_10sdp"
+                android:background="@drawable/blue_button_gradient"
+                android:elevation="@dimen/_5sdp"
+                android:fontFamily="@font/visbycf_bold"
+                android:text="@string/interested"
+                android:visibility="visible"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/tvPrice" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btGoing"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_10sdp"
+                android:background="@drawable/blue_button_gradient"
+                android:elevation="@dimen/_5sdp"
+                android:fontFamily="@font/visbycf_bold"
+                android:text="@string/going"
+                android:layout_marginBottom="@dimen/_10sdp"
+                android:visibility="gone"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/tvPrice" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnCancel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/red_button"
+                android:elevation="@dimen/_5sdp"
+                android:fontFamily="@font/visbycf_bold"
+                android:text="@string/cancel"
+                android:textAllCaps="false"
+                android:visibility="gone"
+                android:textColor="@color/white"
+                android:layout_marginHorizontal="@dimen/_10sdp"
+                android:layout_marginBottom="@dimen/_10sdp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/tvPrice"  />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+</layout>

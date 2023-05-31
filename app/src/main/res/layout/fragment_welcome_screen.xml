@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.ui.scout.fragment.WelcomeScreenFragment">
+
+        <!-- TODO: Update blank fragment layout -->
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/icon"
+            android:layout_width="@dimen/_200sdp"
+            android:layout_height="@dimen/_200sdp"
+            android:src="@drawable/logo"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/tvWelcome"/>
+
+        <com.mursaat.extendedtextview.AnimatedGradientTextView
+            android:id="@+id/tvWelcome"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/welcome"
+            app:colors="@array/text_color"
+            android:textColor="@color/blue"
+            android:fontFamily="@font/visbycf_medium"
+            android:textSize="@dimen/_15ssp"
+            android:textStyle="bold"
+            android:layout_marginBottom="@dimen/_15ssp"
+            app:layout_constraintBottom_toTopOf="@id/tvText"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/_30sdp"
+            android:textSize="@dimen/_10ssp"
+            android:text="@string/text"
+            android:fontFamily="@font/visbycf_medium"
+            android:textColor="@color/black"
+            app:layout_constraintBottom_toTopOf="@+id/btnSignin"
+            app:layout_constraintEnd_toEndOf="@+id/btnSignin"
+            app:layout_constraintStart_toStartOf="@+id/btnSignin" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnSignin"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/blue_button_gradient"
+            android:text="Sign in"
+            android:fontFamily="@font/visbycf_medium"
+            android:textColor="@color/white"
+            android:layout_marginBottom="@dimen/_10sdp"
+            app:layout_constraintBottom_toTopOf="@+id/fl"
+            app:layout_constraintEnd_toEndOf="@+id/fl"
+            app:layout_constraintStart_toStartOf="@+id/fl" />
+
+        <FrameLayout
+            android:id="@+id/fl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/outline_gradient"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginBottom="@dimen/_20sdp"
+            android:layout_marginHorizontal="@dimen/_20sdp">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnSignup"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_2sdp"
+                android:background="@drawable/inner_color"
+                android:fontFamily="@font/visbycf_medium"
+                android:text="Sign up"
+                android:textColor="@color/blue" />
+        </FrameLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

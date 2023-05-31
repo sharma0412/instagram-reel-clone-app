@@ -1,0 +1,316 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        tools:context=".ui.ui.athlete.bottombarfragment.AthleteSettingFragment">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvSettings"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_24sdp"
+                android:gravity="center"
+                android:text="@string/settings"
+                android:textStyle="bold"
+                android:textColor="#B3000000"
+                android:fontFamily="@font/visbycf_medium"
+                android:textSize="@dimen/_18ssp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/glSettingsLeft"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.05" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/glSettingsRight"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.95" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/clNotification"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_18sdp"
+                app:layout_constraintTop_toBottomOf="@+id/tvSettings"
+                app:layout_constraintLeft_toRightOf="@+id/glSettingsLeft"
+                app:layout_constraintRight_toLeftOf="@+id/glSettingsRight">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/ivNotification"
+                    android:layout_width="@dimen/_30sdp"
+                    android:layout_height="@dimen/_20sdp"
+                    android:src="@drawable/ic_bell"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent" />
+
+                <TextView
+                    android:id="@+id/tvBell"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/notifications"
+                    android:textSize="@dimen/_14ssp"
+                    android:textColor="#B3000000"
+                    android:fontFamily="@font/visbycf_medium"
+                    android:layout_marginStart="@dimen/_15sdp"
+                    app:layout_constraintLeft_toRightOf="@+id/ivNotification"
+                    app:layout_constraintTop_toTopOf="@+id/ivNotification"
+                    app:layout_constraintBottom_toBottomOf="@+id/ivNotification" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/ivNotificationNext"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_next"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/ivNotification"
+                    app:layout_constraintBottom_toBottomOf="@+id/ivNotification" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/clSecurity"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_20sdp"
+                app:layout_constraintTop_toBottomOf="@+id/clNotification"
+                app:layout_constraintLeft_toRightOf="@+id/glSettingsLeft"
+                app:layout_constraintRight_toLeftOf="@+id/glSettingsRight">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/ivSecurity"
+                    android:layout_width="@dimen/_30sdp"
+                    android:layout_height="@dimen/_20sdp"
+                    android:src="@drawable/ic_privacy"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent" />
+
+                <TextView
+                    android:id="@+id/tvSecurity"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/security"
+                    android:textSize="@dimen/_14ssp"
+                    android:textColor="#B3000000"
+                    android:fontFamily="@font/visbycf_medium"
+                    android:layout_marginStart="@dimen/_15sdp"
+                    app:layout_constraintLeft_toRightOf="@+id/ivSecurity"
+                    app:layout_constraintTop_toTopOf="@+id/ivSecurity"
+                    app:layout_constraintBottom_toBottomOf="@+id/ivSecurity" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/ivSecurityNext"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_next"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/ivSecurity"
+                    app:layout_constraintBottom_toBottomOf="@+id/ivSecurity" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/clLanguage"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_20sdp"
+                app:layout_constraintTop_toBottomOf="@+id/clSecurity"
+                app:layout_constraintLeft_toRightOf="@+id/glSettingsLeft"
+                app:layout_constraintRight_toLeftOf="@+id/glSettingsRight">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/ivLanguage"
+                    android:layout_width="@dimen/_30sdp"
+                    android:layout_height="@dimen/_20sdp"
+                    android:src="@drawable/ic_language"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent" />
+
+                <TextView
+                    android:id="@+id/tvLanguage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/language"
+                    android:textSize="@dimen/_14ssp"
+                    android:textColor="#B3000000"
+                    android:fontFamily="@font/visbycf_medium"
+                    android:layout_marginStart="@dimen/_16sdp"
+                    app:layout_constraintLeft_toRightOf="@+id/ivLanguage"
+                    app:layout_constraintTop_toTopOf="@+id/ivLanguage"
+                    app:layout_constraintBottom_toBottomOf="@+id/ivLanguage" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/ivLanguageNext"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_next"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/tvLanguage"
+                    app:layout_constraintBottom_toBottomOf="@+id/tvLanguage" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/clAsk"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_20sdp"
+                app:layout_constraintTop_toBottomOf="@+id/clLanguage"
+                app:layout_constraintLeft_toRightOf="@+id/glSettingsLeft"
+                app:layout_constraintRight_toLeftOf="@+id/glSettingsRight">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/ivAsk"
+                    android:layout_width="@dimen/_30sdp"
+                    android:layout_height="@dimen/_20sdp"
+                    android:src="@drawable/ic_help"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent" />
+
+                <TextView
+                    android:id="@+id/tvAsk"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_16sdp"
+                    android:text="@string/ask_a_question"
+                    android:fontFamily="@font/visbycf_medium"
+                    android:textSize="@dimen/_14ssp"
+                    android:textColor="#B3000000"
+                    app:layout_constraintBottom_toBottomOf="@+id/ivAsk"
+                    app:layout_constraintLeft_toRightOf="@+id/ivAsk"
+                    app:layout_constraintTop_toTopOf="@+id/ivAsk" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/ivAskNext"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_next"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/ivAsk"
+                    app:layout_constraintBottom_toBottomOf="@+id/ivAsk" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/clTell"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_20sdp"
+                app:layout_constraintTop_toBottomOf="@+id/clAsk"
+                app:layout_constraintLeft_toRightOf="@+id/glSettingsLeft"
+                app:layout_constraintRight_toLeftOf="@+id/glSettingsRight">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/ivTell"
+                    android:layout_width="@dimen/_30sdp"
+                    android:layout_height="@dimen/_20sdp"
+                    android:src="@drawable/ic_tell"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent" />
+
+                <TextView
+                    android:id="@+id/tvTell"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_16sdp"
+                    android:text="@string/tell_a_friend"
+                    android:textSize="@dimen/_14ssp"
+                    android:textColor="#B3000000"
+                    android:fontFamily="@font/visbycf_medium"
+                    app:layout_constraintBottom_toBottomOf="@+id/ivTell"
+                    app:layout_constraintLeft_toRightOf="@+id/ivTell"
+                    app:layout_constraintTop_toTopOf="@+id/ivTell" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/ivTellNext"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_next"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/ivTell"
+                    app:layout_constraintBottom_toBottomOf="@+id/ivTell" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/clLogout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_20sdp"
+                app:layout_constraintTop_toBottomOf="@+id/clTell"
+                app:layout_constraintLeft_toRightOf="@+id/glSettingsLeft"
+                app:layout_constraintRight_toLeftOf="@+id/glSettingsRight">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/ivLogout"
+                    android:layout_width="@dimen/_30sdp"
+                    android:layout_height="@dimen/_20sdp"
+                    android:src="@drawable/ic_logout"
+                    android:layout_marginStart="@dimen/_2sdp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent" />
+
+                <TextView
+                    android:id="@+id/tvLogout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_16sdp"
+                    android:text="@string/logout"
+                    android:textSize="@dimen/_14ssp"
+                    android:textColor="#B3000000"
+                    android:fontFamily="@font/visbycf_medium"
+                    app:layout_constraintBottom_toBottomOf="@+id/ivLogout"
+                    app:layout_constraintLeft_toRightOf="@+id/ivLogout"
+                    app:layout_constraintTop_toTopOf="@+id/ivLogout" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/ivLogoutNext"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_next"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/ivLogout"
+                    app:layout_constraintBottom_toBottomOf="@+id/ivLogout" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:gravity="center"
+                android:textColor="#66000000"
+                android:fontFamily="@font/visbycf_medium"
+                android:text="@string/version_1_0"
+                app:layout_constraintTop_toBottomOf="@id/clLogout" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+</layout>

@@ -1,0 +1,234 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        tools:context=".ui.ui.athlete.settings.AthleteNotificationsFragment">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/btnBack"
+                android:layout_width="@dimen/_40sdp"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_margin="@dimen/_16sdp"
+                android:background="@drawable/back_button"
+                android:src="@drawable/ic_back"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/visbycf_medium"
+                android:text="@string/notifications"
+                android:textSize="@dimen/_18ssp"
+                android:textStyle="bold"
+                android:textColor="#B3000000"
+                app:layout_constraintBottom_toBottomOf="@+id/btnBack"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/btnBack" />
+
+            <LinearLayout
+                android:id="@+id/ll"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="6"
+                android:gravity="center"
+                android:layout_marginTop="@dimen/_16sdp"
+                android:paddingEnd="@dimen/_20sdp"
+                android:paddingStart="@dimen/_20sdp"
+                app:layout_constraintTop_toBottomOf="@id/btnBack">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Likes"
+                    android:textColor="#99000000"
+                    android:fontFamily="@font/visbycf_medium"
+                    android:layout_weight="6"
+                    android:textSize="@dimen/_14ssp"/>
+
+                <ToggleButton
+                    android:layout_width="@dimen/_40sdp"
+                    android:layout_height="@dimen/_40sdp"
+                    android:background="@drawable/ic_toggle_bg"
+                    style="@style/toggleButton"
+                    android:layout_weight="1"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="6"
+                android:gravity="center"
+                android:paddingEnd="@dimen/_20sdp"
+                android:paddingStart="@dimen/_20sdp"
+                app:layout_constraintTop_toBottomOf="@id/ll">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Comments"
+                    android:layout_weight="6"
+                    android:textColor="#99000000"
+                    android:fontFamily="@font/visbycf_medium"
+                    android:textSize="@dimen/_14ssp"/>
+
+                <ToggleButton
+                    android:layout_width="@dimen/_40sdp"
+                    android:layout_height="@dimen/_40sdp"
+                    android:background="@drawable/ic_toggle_bg"
+                    style="@style/toggleButton"
+                    android:layout_weight="1"/>
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/ll3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="6"
+                android:gravity="center"
+                android:paddingEnd="@dimen/_20sdp"
+                android:paddingStart="@dimen/_20sdp"
+                app:layout_constraintTop_toBottomOf="@id/ll2">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="New Followers"
+                    android:layout_weight="6"
+                    android:textColor="#99000000"
+                    android:fontFamily="@font/visbycf_medium"
+                    android:textSize="@dimen/_14ssp"/>
+
+                <ToggleButton
+                    android:layout_width="@dimen/_40sdp"
+                    android:layout_height="@dimen/_40sdp"
+                    android:background="@drawable/ic_toggle_bg"
+                    style="@style/toggleButton"
+                    android:layout_weight="1"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="6"
+                android:gravity="center"
+                android:paddingEnd="@dimen/_20sdp"
+                android:paddingStart="@dimen/_20sdp"
+                app:layout_constraintTop_toBottomOf="@id/ll3">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Profile Views"
+                    android:layout_weight="6"
+                    android:textColor="#99000000"
+                    android:fontFamily="@font/visbycf_medium"
+                    android:textSize="@dimen/_14ssp"/>
+
+                <ToggleButton
+                    android:layout_width="@dimen/_40sdp"
+                    android:layout_height="@dimen/_40sdp"
+                    android:background="@drawable/ic_toggle_bg"
+                    style="@style/toggleButton"
+                    android:layout_weight="1"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="6"
+                android:gravity="center"
+                android:paddingEnd="@dimen/_20sdp"
+                android:paddingStart="@dimen/_20sdp"
+                app:layout_constraintTop_toBottomOf="@id/ll4">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Direct Messages"
+                    android:layout_weight="6"
+                    android:textColor="#99000000"
+                    android:fontFamily="@font/visbycf_medium"
+                    android:textSize="@dimen/_14ssp"/>
+
+                <ToggleButton
+                    android:layout_width="@dimen/_40sdp"
+                    android:layout_height="@dimen/_40sdp"
+                    android:background="@drawable/ic_toggle_bg"
+                    style="@style/toggleButton"
+                    android:layout_weight="1"/>
+
+                <!--<com.suke.widget.SwitchButton
+                    android:id="@+id/switch_button5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="5"/>-->
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_1sdp"
+                app:layout_constraintTop_toBottomOf="@id/ll"
+                android:background="@color/line_grey"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_1sdp"
+                app:layout_constraintTop_toBottomOf="@id/ll"
+                android:background="@color/line_grey"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_1sdp"
+                app:layout_constraintTop_toBottomOf="@id/ll2"
+                android:background="@color/line_grey"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_1sdp"
+                app:layout_constraintTop_toBottomOf="@id/ll3"
+                android:background="@color/line_grey"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_1sdp"
+                app:layout_constraintTop_toBottomOf="@id/ll4"
+                android:background="@color/line_grey"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_1sdp"
+                app:layout_constraintTop_toBottomOf="@id/ll5"
+                android:background="@color/line_grey"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+</layout>

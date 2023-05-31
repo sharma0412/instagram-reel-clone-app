@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        tools:context=".ui.ui.athlete.activity.PostVideoActivity">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivBack"
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="@dimen/_20sdp"
+                android:layout_marginStart="@dimen/_15sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:src="@drawable/ic_white_backarrow"
+                android:tint="@color/black"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/appCompatTextView4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/visbycf_demibold"
+                android:text="Create Post"
+                android:textColor="@color/text_color"
+                android:textSize="@dimen/_14ssp"
+                app:layout_constraintBottom_toBottomOf="@+id/ivBack"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/ivBack" />
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cvVideoThumbnail"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_170sdp"
+                android:layout_marginHorizontal="@dimen/_15sdp"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:elevation="@dimen/_8sdp"
+                app:cardCornerRadius="@dimen/_8sdp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ivBack">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/videoThumbnail"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/profile_img" />
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:text="@string/sport_name"
+                app:layout_constraintStart_toStartOf="@+id/ivBack"
+                app:layout_constraintTop_toBottomOf="@+id/cvVideoThumbnail" />
+
+            <androidx.appcompat.widget.AppCompatSpinner
+                android:id="@+id/spnSports"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_4sdp"
+                android:background="@drawable/et_post"
+                android:padding="@dimen/_14sdp"
+                app:layout_constraintEnd_toEndOf="@+id/cvVideoThumbnail"
+                app:layout_constraintStart_toStartOf="@+id/cvVideoThumbnail"
+                app:layout_constraintTop_toBottomOf="@+id/tvTitle" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvDescription"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:text="@string/description"
+                app:layout_constraintStart_toStartOf="@+id/spnSports"
+                app:layout_constraintTop_toBottomOf="@+id/spnSports" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/etDescription"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_4sdp"
+                android:background="@drawable/et_post"
+                android:padding="@dimen/_7sdp"
+                android:minHeight="@dimen/_80sdp"
+                android:hint="@string/description"
+                android:gravity="top|start"
+                android:textSize="@dimen/_11ssp"
+                android:fontFamily="@font/visbycf_medium"
+                app:layout_constraintEnd_toEndOf="@+id/spnSports"
+                app:layout_constraintStart_toStartOf="@+id/spnSports"
+                app:layout_constraintTop_toBottomOf="@+id/tvDescription" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btPostVideo"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/_10sdp"
+                android:background="@drawable/blue_button_gradient"
+                android:elevation="@dimen/_8sdp"
+                android:fontFamily="@font/visbycf_demibold"
+                android:text="@string/post_video"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/etDescription"
+                app:layout_constraintStart_toStartOf="@+id/etDescription" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/btCancel"
+                android:layout_width="@dimen/_60sdp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/et_post"
+                android:fontFamily="@font/visbycf_medium"
+                android:padding="@dimen/_5sdp"
+                android:text="@string/cancel"
+                android:gravity="center"
+                android:textSize="@dimen/_10ssp"
+                android:paddingHorizontal="@dimen/_5sdp"
+                app:layout_constraintBottom_toBottomOf="@+id/appCompatTextView4"
+                app:layout_constraintEnd_toEndOf="@+id/cvVideoThumbnail"
+                app:layout_constraintTop_toTopOf="@+id/appCompatTextView4" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+</layout>

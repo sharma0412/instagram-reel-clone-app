@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <color name="blue">#294092</color>
+    <color name="light_blue">#43ADE4</color>
+    <color name="grey">#939598</color>
+    <color name="light_grey">#F1F2F2</color>
+    <color name="color_light_grey">#A7A9AC</color>
+    <color name="box_color">#F9F9F9</color>
+    <color name="line_grey">#E5E5E5</color>
+    <color name="text_color">#B3000000</color>
+    <color name="unselected_text">#B2B2B2</color>
+
+    <color name="miner_blue">#336AB1</color>
+    <color name="miner_blue_light">#3B8ECD</color>
+
+    <color name="st_blue">#43ADE4</color>
+    <color name="ed_blue">#294092</color>
+
+    <color name="colorLessWhite">#FBFBFB</color>
+    <color name="colorDarkGrey">#323338</color>
+
+    <color name="GradientStrokeBorder">
+        <item name="android:startColor">#FFFFFF</item>
+        <item name="android:endColor">#00FFFF</item>
+        <item name="android:angle">145</item>
+    </color>
+
+    <color name="shimmer_color">#d1d1d1</color>
+</resources>

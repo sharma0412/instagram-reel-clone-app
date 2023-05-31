@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:background="#BDBDBD"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.checkbox.MaterialCheckBox
+            android:id="@+id/sbList"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_33sdp"
+            android:button="@null"
+            android:drawableEnd="@drawable/checkbox_style"
+            android:fontFamily="@font/visbycf_medium"
+            android:imeOptions="actionNext"
+            android:paddingHorizontal="@dimen/_8sdp"
+            android:text="@string/choose_a_date"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_12ssp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!--<androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btDone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/filter_button_gradient"
+            android:text="@string/done"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/sbList" />-->
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

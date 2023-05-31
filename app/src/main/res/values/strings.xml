@@ -1,0 +1,140 @@
+<resources>
+    <string name="app_name">Instagram Reel</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="profile">Profile</string>
+    <string name="discover">Discover</string>
+    <string name="reels">Reels</string>
+    <string name="inbox">Inbox</string>
+    <string name="setting">Setting</string>
+    <string name="welcome">Welcome!</string>
+    <string name="text">By tapping Sign In, you agree to our Terms. Learn how we process your data in our Private Policy and Cookies Policy.</string>
+    <string name="email">Email</string>
+    <string name="forgot_password">Forgot Password?</string>
+    <string name="or">OR</string>
+    <string name="password">Password</string>
+    <string name="date_of_birth">Date of birth</string>
+    <string name="lorem_ipsum">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed egestas tortor ac rhoncus lacinia eget.</string>
+    <string name="experience">Experience</string>
+    <string name="smith_advinor">Smith Advinor</string>
+    <string name="settings">Settings</string>
+    <string name="notifications">Notifications</string>
+    <string name="security">Security</string>
+    <string name="language">Language</string>
+    <string name="change_email">Change Email</string>
+    <string name="comments">Comments</string>
+    <string name="change_password">Change Password</string>
+    <string name="tell_a_friend">Tell a Friend</string>
+    <string name="welcome_to_scoutstarr">Welcome to ScoutStarr.</string>
+    <string name="edit_profile">Edit Profile</string>
+    <string name="username">Username</string>
+    <string name="all_of_neymar_s_bio_data_here_and_much_more">All Of Neymar’s Bio Data Here and much more.</string>
+    <string name="login">Login</string>
+    <string name="specialised">Specialised</string>
+    <string name="we_will_send_a_text_with_a_verification_code_message_and_data_rates_may_apply_learn_what_happens_when_your_number_changes">We will send a text with a verification code. Message and data rates may apply. Learn what happens when your number changes.</string>
+    <string name="logout">Logout</string>
+    <string name="ask_a_question">Ask a Question</string>
+    <string name="version_1_0">Version 1.0</string>
+    <string name="reels_cap">REELS</string>
+    <string name="current_password">Current Password</string>
+    <string name="new_password">New Password</string>
+    <string name="confirm">Confirm</string>
+    <string name="last_7_months">Last 7 Months</string>
+    <string name="views">Views</string>
+    <string name="insight">Insight</string>
+    <string name="overview">Overview</string>
+    <string name="get_gold_package">Get Gold Package</string>
+    <string name="to_boost_your_profile">To boost your profile</string>
+    <string name="awareness">Awareness</string>
+    <string name="_94k">94k</string>
+    <string name="view_duration">View Duration</string>
+    <string name="_4m_2s">4m 2s</string>
+    <string name="mins_watched">Mins Watched</string>
+    <string name="likes">Likes</string>
+    <string name="_48k">48k</string>
+    <string name="_254k">254k</string>
+    <string name="job_title">Job Title</string>
+    <string name="john">John</string>
+    <string name="bio_date">Bio Date</string>
+    <string name="smith">Smith</string>
+    <string name="from">From</string>
+    <string name="to">To</string>
+    <string name="company_name">Company Name</string>
+    <string name="john_smith">John Smith</string>
+    <string name="kick_off">Kick Off</string>
+    <string name="location">Location</string>
+    <string name="find_a_game">Find a game</string>
+    <string name="all_sports">All sports</string>
+    <string name="create_a_new_game">Create a new game</string>
+    <string name="in_game">In-Game</string>
+    <string name="sunday">Sunday</string>
+    <string name="mixed_baseball">Mixed baseball</string>
+    <string name="play">Play</string>
+    <string name="video_call">Video Call</string>
+    <string name="sunday_morning_in_game">Sunday Morning In-Game</string>
+    <string name="hosted_by">Hosted by</string>
+    <string name="marigum_smile">Marigum Smile</string>
+    <string name="message">Message</string>
+    <string name="soccer">Soccer</string>
+    <string name="sun_28_mar_8_30_pm">SUN, 28 MAR 8:30 PM</string>
+    <string name="london_square_uk">London Square, UK</string>
+    <string name="free">Free</string>
+    <string name="interested">Interested?</string>
+    <string name="i_will_be_hearing_from_your_athlete">I will be Hearing from your athlete...</string>
+    <string name="going">Going</string>
+    <string name="cancel">Cancel</string>
+    <string name="_12">12</string>
+    <string name="country">Country</string>
+    <string name="my_details_are">My Details are</string>
+    <string name="full_name">Full Name</string>
+    <string name="dd">DD</string>
+    <string name="mm">MM</string>
+    <string name="yyyy">YYYY</string>
+    <string name="minus">-</string>
+    <string name="your_specialised_sports">Your Specialised Sports</string>
+    <string name="cont">Continue</string>
+    <string name="choose_a_date">Choose a date</string>
+    <string name="experience_list">Experience List</string>
+    <string name="phone_number">Phone Number</string>
+    <string name="sport">Sport</string>
+    <string name="height">Height</string>
+    <string name="weight">Weight</string>
+    <string name="position">Position</string>
+    <string name="goal_keeper">Goal keeper</string>
+    <string name="save_changes">Save Changes</string>
+    <string name="select_your_sports_list">Select your Sports list</string>
+    <string name="done">Done</string>
+    <string name="capture_button">Capture Button</string>
+    <string name="flash_button">flash button</string>
+    <string name="map_key">"YOUR MAP KEY"</string>
+    <string name="description">Description</string>
+    <string name="post_video">Post Video</string>
+    <string name="sport_name">Sport Name</string>
+    <string name="enter_a_reason_to_cancel">Enter a reason to cancel</string>
+    <string name="reason">Reason</string>
+    <string name="ok">OK</string>
+
+    <array name="text_color">
+        <item>@color/miner_blue</item>
+        <item>@color/blue</item>
+    </array>
+
+    <array name="text_color_insight">
+        <item>@color/miner_blue</item>
+        <item>@color/blue</item>
+    </array>
+
+    <string-array name="insight_spinner">
+        <item>"Last 7 Days"</item>
+        <item>"Last 7 Weeks"</item>
+        <item>"Last 7 Months"</item>
+        <item>"Last 7 Years"</item>
+    </string-array>
+
+    <string name="bio">Enter your bio</string>
+    <string name="mail">Email</string>
+    <string name="number">Number</string>
+    <string name="nuber">Enter Number</string>
+    <string name="ath">Athletics Stats</string>
+
+</resources>

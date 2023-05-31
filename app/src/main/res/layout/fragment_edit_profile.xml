@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <View
+                android:id="@+id/view3"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_150sdp"
+                android:background="@drawable/profile_gradient"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/circleProfileIV"
+                android:layout_width="@dimen/_115sdp"
+                android:layout_height="@dimen/_115sdp"
+                android:src="@drawable/profile_img"
+                app:layout_constraintBottom_toBottomOf="@+id/view3"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/view3" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/appCompatTextView5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/visbycf_medium"
+                android:text="@string/edit_profile"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_22sdp"
+                app:layout_constraintBottom_toTopOf="@+id/circleProfileIV"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/appCompatTextView8"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_20sdp"
+                android:fontFamily="@font/visbycf_medium"
+                android:text="@string/experience"
+                android:textColor="#B3000000"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:textSize="@dimen/_18ssp"
+                app:layout_constraintTop_toBottomOf="@id/circleProfileIV" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/etFirstname"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/rectangle_shape"
+                android:fontFamily="@font/visbycf_medium"
+                android:hint="@string/john"
+                android:elevation="@dimen/_2sdp"
+                android:imeOptions="actionNext"
+                android:inputType="text"
+                android:padding="@dimen/_15sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:singleLine="true"
+                android:textColor="@color/text_color"
+                android:textSize="@dimen/_12ssp"
+                app:layout_constraintEnd_toEndOf="@+id/appCompatTextView8"
+                app:layout_constraintStart_toStartOf="@+id/appCompatTextView8"
+                app:layout_constraintTop_toBottomOf="@+id/appCompatTextView8" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/etLastName"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/rectangle_shape"
+                android:fontFamily="@font/visbycf_medium"
+                android:hint="@string/smith"
+                android:imeOptions="actionNext"
+                android:inputType="text"
+                android:elevation="@dimen/_2sdp"
+                android:padding="@dimen/_15sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:singleLine="true"
+                android:textColor="@color/text_color"
+                android:textSize="@dimen/_12ssp"
+                app:layout_constraintEnd_toEndOf="@+id/etFirstname"
+                app:layout_constraintStart_toStartOf="@+id/etFirstname"
+                app:layout_constraintTop_toBottomOf="@+id/etFirstname" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/etUsername"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/rectangle_shape"
+                android:fontFamily="@font/visbycf_medium"
+                android:hint="@string/username"
+                android:imeOptions="actionNext"
+                android:inputType="text"
+                android:elevation="@dimen/_2sdp"
+                android:padding="@dimen/_15sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:singleLine="true"
+                android:textColor="@color/text_color"
+                android:textSize="@dimen/_12ssp"
+                app:layout_constraintEnd_toEndOf="@+id/etLastName"
+                app:layout_constraintStart_toStartOf="@+id/etLastName"
+                app:layout_constraintTop_toBottomOf="@+id/etLastName" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/etBio"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/rectangle_shape"
+                android:fontFamily="@font/visbycf_medium"
+                android:hint="@string/bio_date"
+                android:imeOptions="actionNext"
+                android:inputType="text"
+                android:elevation="@dimen/_2sdp"
+                android:padding="@dimen/_15sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:singleLine="true"
+                android:textColor="@color/text_color"
+                android:textSize="@dimen/_12ssp"
+                app:layout_constraintEnd_toEndOf="@+id/etUsername"
+                app:layout_constraintStart_toStartOf="@+id/etUsername"
+                app:layout_constraintTop_toBottomOf="@+id/etUsername" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/appCompatTextView9"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_20sdp"
+                android:fontFamily="@font/visbycf_medium"
+                android:text="@string/experience"
+                android:textColor="#B3000000"
+                android:textSize="@dimen/_18ssp"
+                android:layout_marginTop="@dimen/_15sdp"
+                app:layout_constraintTop_toBottomOf="@+id/etBio" />
+
+            <LinearLayout
+                android:id="@+id/linearLayout2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:orientation="horizontal"
+                android:weightSum="2"
+                app:layout_constraintEnd_toEndOf="@+id/appCompatTextView9"
+                app:layout_constraintStart_toStartOf="@+id/appCompatTextView9"
+                app:layout_constraintTop_toBottomOf="@+id/appCompatTextView9">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/etFrom"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/_10sdp"
+                    android:layout_weight="1"
+                    android:background="@drawable/rectangle_from"
+                    android:fontFamily="@font/visbycf_medium"
+                    android:hint="@string/from"
+                    android:elevation="@dimen/_2sdp"
+                    android:padding="@dimen/_15sdp"
+                    android:singleLine="true"
+                    android:textColor="@color/text_color"
+                    android:textSize="@dimen/_12ssp"
+                    app:layout_constraintEnd_toEndOf="@+id/etUsername"
+                    app:layout_constraintStart_toStartOf="@+id/etUsername"
+                    app:layout_constraintTop_toBottomOf="@+id/etUsername" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/etTo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:layout_weight="1"
+                    android:background="@drawable/rectangle_from"
+                    android:fontFamily="@font/visbycf_medium"
+                    android:hint="@string/to"
+                    android:elevation="@dimen/_2sdp"
+                    android:padding="@dimen/_15sdp"
+                    android:singleLine="true"
+                    android:textColor="@color/text_color"
+                    app:layout_constraintEnd_toEndOf="@+id/etUsername"
+                    app:layout_constraintStart_toStartOf="@+id/etUsername"
+                    app:layout_constraintTop_toBottomOf="@+id/etUsername" />
+
+            </LinearLayout>
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/etCompanyName"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/rectangle_shape"
+                android:fontFamily="@font/visbycf_medium"
+                android:hint="@string/company_name"
+                android:imeOptions="actionNext"
+                android:inputType="text"
+                android:padding="@dimen/_15sdp"
+                android:elevation="@dimen/_2sdp"
+                android:singleLine="true"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:textColor="@color/text_color"
+                android:textSize="@dimen/_12ssp"
+                app:layout_constraintEnd_toEndOf="@+id/etUsername"
+                app:layout_constraintStart_toStartOf="@+id/etUsername"
+                app:layout_constraintTop_toBottomOf="@+id/linearLayout2" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/etJobTitle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/rectangle_shape"
+                android:fontFamily="@font/visbycf_medium"
+                android:hint="@string/job_title"
+                android:imeOptions="actionNext"
+                android:inputType="text"
+                android:padding="@dimen/_15sdp"
+                android:elevation="@dimen/_2sdp"
+                android:singleLine="true"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:textColor="@color/text_color"
+                android:textSize="@dimen/_12ssp"
+                app:layout_constraintEnd_toEndOf="@+id/etUsername"
+                app:layout_constraintStart_toStartOf="@+id/etUsername"
+                app:layout_constraintTop_toBottomOf="@+id/etCompanyName" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+</layout>

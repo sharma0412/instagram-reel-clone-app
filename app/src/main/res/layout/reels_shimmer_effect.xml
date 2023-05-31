@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <FrameLayout
+            android:id="@+id/reels_player"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/shimmer_color"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/player_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_15sdp"
+            android:layout_marginBottom="@dimen/_40sdp"
+            android:fontFamily="@font/visbycf_bold"
+            android:text="Neymar Dipper"
+            android:textColor="@color/grey"
+            android:textSize="@dimen/_16ssp"
+            android:background="@color/grey"
+            app:layout_constraintBottom_toBottomOf="@id/reels_player"
+            app:layout_constraintStart_toStartOf="@id/reels_player" />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/profileIV"
+            android:layout_width="@dimen/_40sdp"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_marginEnd="@dimen/_6sdp"
+            android:layout_marginBottom="@dimen/_10sdp"
+            android:src="@color/grey"
+            app:layout_constraintBottom_toTopOf="@id/like_circle"
+            app:layout_constraintEnd_toEndOf="@id/reels_player" />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/like_circle"
+            android:layout_width="@dimen/_40sdp"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_marginEnd="@dimen/_6sdp"
+            android:layout_marginBottom="@dimen/_10sdp"
+            android:src="@color/grey"
+            app:layout_constraintBottom_toTopOf="@id/like_circle"
+            app:layout_constraintEnd_toEndOf="@id/reels_player" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvLikeCount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1920"
+            android:background="@color/grey"
+            android:textColor="@color/grey"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="@+id/like_circle"
+            app:layout_constraintEnd_toEndOf="@id/like_circle"
+            app:layout_constraintStart_toStartOf="@id/like_circle"
+            app:layout_constraintTop_toBottomOf="@id/like_circle" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/like_heart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_2sdp"
+            android:layout_marginBottom="@dimen/_4sdp"
+            android:src="@drawable/ic_like_heart"
+            android:tint="@color/grey"
+            app:layout_constraintBottom_toBottomOf="@+id/like_circle"
+            app:layout_constraintEnd_toEndOf="@+id/like_circle"
+            app:layout_constraintStart_toStartOf="@+id/like_circle"
+            app:layout_constraintTop_toTopOf="@+id/like_circle" />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/btnChat"
+            android:layout_width="@dimen/_40sdp"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_marginEnd="@dimen/_6sdp"
+            android:layout_marginBottom="@dimen/_6sdp"
+            android:src="@color/grey"
+            app:layout_constraintBottom_toTopOf="@id/btnForward"
+            app:layout_constraintEnd_toEndOf="@id/reels_player"
+            app:layout_constraintTop_toBottomOf="@id/tvLikeCount" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvCommentCount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1920"
+            android:textColor="@color/grey"
+            android:background="@color/grey"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="@+id/btnChat"
+            app:layout_constraintEnd_toEndOf="@id/btnChat"
+            app:layout_constraintStart_toStartOf="@id/btnChat"
+            app:layout_constraintTop_toBottomOf="@id/btnChat" />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/btnForward"
+            android:layout_width="@dimen/_40sdp"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_marginEnd="@dimen/_6sdp"
+            android:layout_marginBottom="@dimen/_15sdp"
+            android:src="@color/grey"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@id/reels_player"
+            app:layout_constraintTop_toBottomOf="@id/tvCommentCount" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvForwardCount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1920"
+            android:visibility="invisible"
+            android:textColor="@color/grey"
+            android:background="@color/grey"
+            app:layout_constraintBottom_toBottomOf="@+id/btnForward"
+            app:layout_constraintEnd_toEndOf="@id/btnForward"
+            app:layout_constraintStart_toStartOf="@id/btnForward"
+            app:layout_constraintTop_toBottomOf="@id/btnForward" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

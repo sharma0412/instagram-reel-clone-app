@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/scout_home_nav"
+    app:startDestination="@id/reelsFragment">
+
+    <fragment
+        android:id="@+id/reelsFragment"
+        android:name="com.instagramreel.ui.ui.scout.bottombarfragment.ReelsFragment"
+        android:label="ReelsFragment"
+        tools:layout="@layout/fragment_reels">
+        <action
+            android:id="@+id/action_reelsFragment_to_personProfileFragment2"
+            app:destination="@id/personProfileFragment2" />
+    </fragment>
+    <fragment
+        android:id="@+id/editProfileFragment"
+        android:name="com.instagramreel.ui.ui.scout.fragment.profile.EditProfileFragment"
+        android:label="EditProfileFragment"
+        tools:layout="@layout/fragment_edit_profile">
+        <action
+            android:id="@+id/action_editProfileFragment_to_profileFragment"
+            app:destination="@id/profileFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/settingFragment"
+        android:name="com.instagramreel.ui.ui.scout.bottombarfragment.SettingFragment"
+        android:label="SettingFragment"
+        tools:layout="@layout/fragment_setting" >
+        <action
+            android:id="@+id/action_settingFragment_to_notificationsFragment"
+            app:destination="@id/notificationsFragment" />
+        <action
+            android:id="@+id/action_settingFragment_to_tellFriendFragment"
+            app:destination="@id/tellFriendFragment" />
+        <action
+            android:id="@+id/action_settingFragment_to_securityFragment"
+            app:destination="@id/securityFragment" />
+        <action
+            android:id="@+id/action_settingFragment_to_signinFragment2"
+            app:destination="@id/signinFragment2" />
+    </fragment>
+    <fragment
+        android:id="@+id/notificationsFragment"
+        android:name="com.instagramreel.ui.ui.scout.settings.NotificationsFragment"
+        android:label="NotificationsFragment"
+        tools:layout="@layout/fragment_notifications">
+        <action
+            android:id="@+id/action_notificationsFragment_to_settingFragment"
+            app:destination="@id/settingFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/tellFriendFragment"
+        android:name="com.instagramreel.ui.ui.scout.settings.TellFriendFragment"
+        android:label="TellFriendFragment"
+        tools:layout="@layout/fragment_tell_friend">
+        <action
+            android:id="@+id/action_tellFriendFragment_to_settingFragment"
+            app:destination="@id/settingFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/securityFragment"
+        android:name="com.instagramreel.ui.ui.scout.settings.SecurityFragment"
+        android:label="SecurityFragment"
+        tools:layout="@layout/fragment_security">
+        <action
+            android:id="@+id/action_securityFragment_to_settingFragment"
+            app:destination="@id/settingFragment" />
+        <action
+            android:id="@+id/action_securityFragment_to_changePasswordFragment"
+            app:destination="@id/changePasswordFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/chatFragment"
+        android:name="com.instagramreel.ui.ui.scout.fragment.ChatFragment"
+        android:label="ChatFragment"
+        tools:layout="@layout/fragment_chat">
+        <action
+            android:id="@+id/action_chatFragment_to_inboxFragment"
+            app:destination="@id/inboxFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/discoverReelsFragment"
+        android:name="com.instagramreel.ui.ui.scout.bottombarfragment.DiscoverReelsFragment"
+        android:label="fragment_discover_reels"
+        tools:layout="@layout/fragment_discover_reels" >
+        <action
+            android:id="@+id/action_discoverReelsFragment_to_discoverFragment"
+            app:destination="@id/discoverFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/discoverFragment"
+        android:name="com.instagramreel.ui.ui.scout.bottombarfragment.DiscoverFragment"
+        android:label="DiscoverFragment"
+        tools:layout="@layout/fragment_discover">
+        <action
+            android:id="@+id/action_discoverFragment_to_discoverReelsFragment"
+            app:destination="@id/discoverReelsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/inboxFragment"
+        android:name="com.instagramreel.ui.ui.scout.bottombarfragment.InboxFragment"
+        android:label="InboxFragment"
+        tools:layout="@layout/fragment_inbox">
+        <action
+            android:id="@+id/action_inboxFragment_to_chatFragment"
+            app:destination="@id/chatFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.instagramreel.ui.ui.scout.bottombarfragment.ProfileFragment"
+        android:label="ProfileFragment"
+        tools:layout="@layout/fragment_profile">
+        <action
+            android:id="@+id/action_profileFragment_to_editProfileFragment"
+            app:destination="@id/editProfileFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/signinFragment2"
+        android:name="com.instagramreel.ui.ui.scout.fragment.signin.SigninFragment"
+        android:label="SigninFragment"
+        tools:layout="@layout/fragment_signin"/>
+    <fragment
+        android:id="@+id/changePasswordFragment"
+        android:name="com.instagramreel.ui.ui.scout.settings.ChangePasswordFragment"
+        android:label="ChangePasswordFragment"
+        tools:layout="@layout/fragment_change_password"/>
+    <fragment
+        android:id="@+id/personProfileFragment2"
+        android:name="com.instagramreel.ui.ui.scout.fragment.profile.PersonProfileFragment"
+        android:label="PersonProfileFragment"
+        tools:layout="@layout/fragment_person_profile">
+        <action
+            android:id="@+id/action_personProfileFragment2_to_reelsFragment"
+            app:destination="@id/reelsFragment" />
+        <action
+            android:id="@+id/action_personProfileFragment2_to_profileReelsFragment2"
+            app:destination="@id/profileReelsFragment2" />
+    </fragment>
+    <fragment
+        android:id="@+id/profileReelsFragment2"
+        android:name="com.instagramreel.ui.ui.athlete.reels.ProfileReelsFragment"
+        android:label="ProfileReelsFragment"
+        tools:layout="@layout/fragment_profile_reels">
+        <action
+            android:id="@+id/action_profileReelsFragment2_to_personProfileFragment2"
+            app:destination="@id/personProfileFragment2" />
+    </fragment>
+</navigation>

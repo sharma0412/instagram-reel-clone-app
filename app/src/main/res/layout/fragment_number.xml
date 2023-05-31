@@ -1,0 +1,98 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.ui.scout.fragment.signin.NumberFragment">
+
+        <!-- TODO: Update blank fragment layout -->
+        <ImageView
+            android:id="@+id/btnBack"
+            android:layout_width="@dimen/_40sdp"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_margin="@dimen/_20sdp"
+            android:background="@drawable/back_button"
+            android:src="@drawable/ic_back"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/appCompatTextView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_30sdp"
+            android:fontFamily="@font/visbycf_medium"
+            android:text="My Number is"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_24ssp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/btnBack"
+            app:layout_constraintTop_toBottomOf="@+id/btnBack" />
+
+        <com.hbb20.CountryCodePicker
+            android:id="@+id/spinner"
+            android:layout_width="@dimen/_90sdp"
+            android:layout_height="0dp"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:background="@drawable/rectangle_country"
+            android:elevation="@dimen/_2sdp"
+            android:gravity="center"
+            app:ccp_showFlag="false"
+            android:spinnerMode="dropdown"
+            app:layout_constraintBottom_toBottomOf="@+id/etPhone"
+            app:layout_constraintStart_toStartOf="@id/appCompatTextView2"
+            app:layout_constraintTop_toBottomOf="@id/appCompatTextView2"
+            tools:listitem="@layout/spinner_item" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/etPhone"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:background="@drawable/rectangle_number"
+            android:fontFamily="@font/visbycf_medium"
+            android:hint="@string/phone_number"
+            android:inputType="number"
+            android:elevation="@dimen/_2sdp"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:padding="@dimen/_12sdp"
+            android:textSize="@dimen/_14ssp"
+            app:layout_constraintTop_toBottomOf="@id/appCompatTextView2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/spinner" />
+
+        <androidx.appcompat.widget.AppCompatCheckedTextView
+            android:id="@+id/textView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_30sdp"
+            android:fontFamily="@font/visbycf_medium"
+            android:text="@string/we_will_send_a_text_with_a_verification_code_message_and_data_rates_may_apply_learn_what_happens_when_your_number_changes"
+            android:textColor="#CC000000"
+            app:layout_constraintEnd_toEndOf="@+id/etPhone"
+            app:layout_constraintStart_toStartOf="@+id/spinner"
+            app:layout_constraintTop_toBottomOf="@+id/etPhone" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnContinue"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/blue_button_gradient"
+            android:fontFamily="@font/visbycf_medium"
+            android:text="Continue"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_14ssp"
+            android:layout_marginBottom="@dimen/_10sdp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/textView"
+            app:layout_constraintStart_toStartOf="@+id/spinner" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

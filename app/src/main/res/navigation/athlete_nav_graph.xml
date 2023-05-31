@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/athlete_nav_graph"
+    app:startDestination="@id/athleteReelsFragment">
+
+    <fragment
+        android:id="@+id/athleteReelsFragment"
+        android:name="com.instagramreel.ui.ui.athlete.bottombarfragment.AthleteReelsFragment"
+        android:label="AthleteReelsFragment"
+        tools:layout="@layout/fragment_athlete_reels" >
+        <action
+            android:id="@+id/action_athleteReelsFragment_to_personProfileFragment"
+            app:destination="@id/personProfileFragment" />
+        <action
+            android:id="@+id/action_athleteReelsFragment_to_athleteProfileFragment"
+            app:destination="@id/athleteProfileFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/athleteInboxFragment"
+        android:name="com.instagramreel.ui.ui.athlete.bottombarfragment.AthleteInboxFragment"
+        android:label="AthleteInboxFragment"
+        tools:layout="@layout/fragment_athlete_inbox">
+        <action
+            android:id="@+id/action_athleteInboxFragment_to_athleteChatFragment"
+            app:destination="@id/athleteChatFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/athleteProfileFragment"
+        android:name="com.instagramreel.ui.ui.athlete.bottombarfragment.AthleteProfileFragment"
+        android:label="AthleteProfileFragment"
+        tools:layout="@layout/fragment_athelete_profile">
+        <action
+            android:id="@+id/action_athleteProfileFragment_to_athleteSettingFragment"
+            app:destination="@id/athleteSettingFragment" />
+        <action
+            android:id="@+id/action_athleteProfileFragment_to_profileReelsFragment"
+            app:destination="@id/profileReelsFragment" />
+        <action
+            android:id="@+id/action_athleteProfileFragment_to_athleteEditProfileFragment"
+            app:destination="@id/athleteEditProfileFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/insightFragment"
+        android:name="com.instagramreel.ui.ui.athlete.bottombarfragment.InsightFragment"
+        android:label="InsightFragment"
+        tools:layout="@layout/fragment_insight"/>
+    <fragment
+        android:id="@+id/kickoffFragment"
+        android:name="com.instagramreel.ui.ui.athlete.bottombarfragment.KickoffFragment"
+        android:label="fragment_kickoff"
+        tools:layout="@layout/fragment_kickoff" >
+        <action
+            android:id="@+id/action_kickoffFragment_to_gameDetailsFragment"
+            app:destination="@id/gameDetailsFragment"
+            app:popUpToInclusive="false" />
+        <action
+            android:id="@+id/action_kickoffFragment_to_placeSelectionFragment"
+            app:destination="@id/placeSelectionFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/gameDetailsFragment"
+        android:name="com.instagramreel.ui.ui.athlete.fragments.GameDetailsFragment"
+        android:label="fragment_game_details"
+        tools:layout="@layout/fragment_game_details" >
+        <action
+            android:id="@+id/action_gameDetailsFragment_to_kickoffFragment"
+            app:destination="@id/kickoffFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/athleteChatFragment"
+        android:name="com.instagramreel.ui.ui.athlete.fragments.AthleteChatFragment"
+        android:label="AthleteChatFragment"
+        tools:layout="@layout/fragment_athlete_chat">
+        <action
+            android:id="@+id/action_athleteChatFragment_to_athleteInboxFragment"
+            app:destination="@id/athleteInboxFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/athleteSettingFragment"
+        android:name="com.instagramreel.ui.ui.athlete.bottombarfragment.AthleteSettingFragment"
+        android:label="AthleteSettingFragment"
+        tools:layout="@layout/fragment_setting">
+        <action
+            android:id="@+id/action_athleteSettingFragment_to_athleteProfileFragment"
+            app:destination="@id/athleteProfileFragment" />
+        <action
+            android:id="@+id/action_athleteSettingFragment_to_notificationsFragment2"
+            app:destination="@id/notificationsFragment2" />
+        <action
+            android:id="@+id/action_athleteSettingFragment_to_athleteTellFriendFragment"
+            app:destination="@id/athleteTellFriendFragment" />
+        <action
+            android:id="@+id/action_athleteSettingFragment_to_athleteSecurityFragment"
+            app:destination="@id/athleteSecurityFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/notificationsFragment2"
+        android:name="com.instagramreel.ui.ui.athlete.settings.AthleteNotificationsFragment"
+        android:label="NotificationsFragment"
+        tools:layout="@layout/fragment_notifications">
+        <action
+            android:id="@+id/action_notificationsFragment2_to_athleteSettingFragment"
+            app:destination="@id/athleteSettingFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/athleteTellFriendFragment"
+        android:name="com.instagramreel.ui.ui.athlete.settings.AthleteTellFriendFragment"
+        android:label="AthleteTellFriendFragment"
+        tools:layout="@layout/fragment_tell_friend">
+        <action
+            android:id="@+id/action_athleteTellFriendFragment_to_athleteSettingFragment"
+            app:destination="@id/athleteSettingFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/athleteSecurityFragment"
+        android:name="com.instagramreel.ui.ui.athlete.settings.AthleteSecurityFragment"
+        android:label="AthleteSecurityFragment"
+        tools:layout="@layout/fragment_security">
+        <action
+            android:id="@+id/action_athleteSecurityFragment_to_athleteSettingFragment"
+            app:destination="@id/athleteSettingFragment" />
+        <action
+            android:id="@+id/action_athleteSecurityFragment_to_athleteChangePasswordFragment"
+            app:destination="@id/athleteChangePasswordFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/athleteChangePasswordFragment"
+        android:name="com.instagramreel.ui.ui.athlete.settings.AthleteChangePasswordFragment"
+        android:label="AthleteChangePasswordFragment"
+        tools:layout="@layout/fragment_change_password">
+        <action
+            android:id="@+id/action_athleteChangePasswordFragment_to_athleteSecurityFragment"
+            app:destination="@id/athleteSecurityFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/placeSelectionFragment"
+        android:name="com.instagramreel.ui.ui.athlete.fragments.PlaceSelectionFragment"
+        android:label="PlaceSelectionFragment"
+        tools:layout="@layout/fragment_place_selection">
+        <action
+            android:id="@+id/action_placeSelectionFragment_to_kickoffFragment2"
+            app:destination="@id/kickoffFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/profileReelsFragment"
+        android:name="com.instagramreel.ui.ui.athlete.reels.ProfileReelsFragment"
+        android:label="ProfileReelsFragment"
+        tools:layout="@layout/fragment_profile_reels">
+        <action
+            android:id="@+id/action_profileReelsFragment_to_athleteProfileFragment"
+            app:destination="@id/athleteProfileFragment" />
+        <action
+            android:id="@+id/action_profileReelsFragment_to_personProfileFragment"
+            app:destination="@id/personProfileFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/personProfileFragment"
+        android:name="com.instagramreel.ui.ui.scout.fragment.profile.PersonProfileFragment"
+        android:label="PersonProfileFragment"
+        tools:layout="@layout/fragment_person_profile">
+        <action
+            android:id="@+id/action_personProfileFragment_to_athleteReelsFragment"
+            app:destination="@id/athleteReelsFragment" />
+        <action
+            android:id="@+id/action_personProfileFragment_to_profileReelsFragment"
+            app:destination="@id/profileReelsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/athleteEditProfileFragment"
+        android:name="com.instagramreel.ui.ui.athlete.fragments.AthleteEditProfileFragment"
+        android:label="AthleteEditProfileFragment"
+        tools:layout="@layout/fragment_athlete_edit_profile"/>
+</navigation>

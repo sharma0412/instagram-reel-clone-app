@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/experienceTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:fontFamily="@font/visbycf_regular"
+            android:text="@string/experience"
+            android:textColor="@color/text_color"
+            android:textSize="@dimen/_13ssp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/experienceETT"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:background="@drawable/rectangle_shape"
+            android:elevation="@dimen/_2sdp"
+            android:fontFamily="@font/visbycf_medium"
+            android:hint="Job Title"
+            android:imeOptions="actionNext"
+            android:inputType="text"
+            android:padding="@dimen/_15sdp"
+            android:paddingHorizontal="@dimen/_5sdp"
+            android:paddingVertical="@dimen/_10sdp"
+            android:singleLine="true"
+            android:textColor="#000000"
+            android:textSize="@dimen/_12ssp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/experienceTV" />
+
+        <LinearLayout
+            android:id="@+id/ll"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:orientation="horizontal"
+            android:weightSum="2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/experienceETT">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/fromTV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:layout_weight="1"
+                android:fontFamily="@font/visbycf_regular"
+                android:text="From"
+                android:textColor="@color/text_color"
+                android:textSize="@dimen/_13ssp" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/toTV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_weight="1"
+                android:fontFamily="@font/visbycf_regular"
+                android:text="To"
+                android:textColor="@color/text_color"
+                android:textSize="@dimen/_13ssp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/ll">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvFromDate"
+                android:layout_width="@dimen/_30sdp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:layout_weight="1"
+                android:background="@drawable/from"
+                android:elevation="@dimen/_2sdp"
+                android:gravity="center"
+                android:hint="@string/choose_a_date" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvToDate"
+                android:layout_width="@dimen/_30sdp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_weight="1"
+                android:background="@drawable/from"
+                android:elevation="@dimen/_2sdp"
+                android:gravity="center"
+                android:hint="@string/choose_a_date" />
+
+        </LinearLayout>
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/specializedTV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:fontFamily="@font/visbycf_regular"
+            android:text="@string/specialised"
+            android:textColor="@color/text_color"
+            android:textSize="@dimen/_13ssp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/ll1" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/spnSpecialized"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:layout_marginBottom="@dimen/_14sdp"
+            android:background="@drawable/rectangle_shape"
+            android:elevation="@dimen/_2sdp"
+            android:fontFamily="@font/visbycf_medium"
+            android:hint="@string/your_specialised_sports"
+            android:imeOptions="actionNext"
+            android:inputType="text"
+            android:padding="@dimen/_15sdp"
+            android:paddingHorizontal="@dimen/_5sdp"
+            android:paddingVertical="@dimen/_10sdp"
+            android:singleLine="true"
+            android:textColor="#000000"
+            android:textSize="@dimen/_12ssp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/specializedTV" />
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/btnRemove"
+            android:layout_width="@dimen/_24sdp"
+            android:layout_height="@dimen/_24sdp"
+            android:elevation="@dimen/_5sdp"
+            app:cardCornerRadius="@dimen/_6sdp"
+            app:layout_constraintBottom_toTopOf="@+id/experienceETT"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:padding="@dimen/_5sdp"
+                android:src="@drawable/ic_remove" />
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <!--<com.google.android.material.card.MaterialCardView
+            android:id="@+id/btnAdd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:elevation="@dimen/_5sdp"
+            app:cardCornerRadius="@dimen/_6sdp"
+            app:layout_constraintBottom_toTopOf="@+id/experienceET"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="@dimen/_24sdp"
+                android:layout_height="@dimen/_24sdp"
+                android:padding="@dimen/_5sdp"
+                android:src="@drawable/ic_plus" />
+
+        </com.google.android.material.card.MaterialCardView>-->
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
